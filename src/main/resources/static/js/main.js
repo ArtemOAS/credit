@@ -2,27 +2,21 @@
 var app = angular.module('app', []);
 // Define the `PhoneListController` controller on the `phonecatApp` module
 app.controller('appCtrl', ['$scope', '$http', function ($scope, $http) {
-    $scope.user = {};
 
-    $scope.search = function () {
-        var parameters = {
-            user: $scope.user
+    $scope.search = function(){
+
+        var data = {
+            username: $scope.username,
+            password: $scope.password
         };
-        var config = {
-            params: parameters
+
+        var successCallBack = function(response){
+            $scope.results = response.data;
         };
-        /* the $http service allows you to make arbitrary ajax requests.
-         * in this case you might also consider using angular-resource and setting up a
-         * User $resource. */
-        $http.get('/resource/', config).success(
-            function (data, status, header, config) {
-                $scope.Datails = data;
-            }
-        ).error(function (data, status, header, config) {
-            $scope.ResponseDetails = "Data: " + data +
-                "<hr />status: " + status +
-                "<hr />headers: " + header +
-                "<hr />config: " + config;
-        });
+
+        var errorCallBack = function(response){
+            // error response found from server
+        };
+        $http.post('/resource/', data).then(successCallBack, errorCallBack);
     }
 }]);

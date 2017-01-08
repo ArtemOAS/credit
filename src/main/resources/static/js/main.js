@@ -6,8 +6,8 @@ app.controller('appCtrl', ['$scope', '$http', function ($scope, $http) {
     $scope.search = function(){
 
         var data = {
-            username: $scope.username,
-            password: $scope.password
+            sumCreditClient: $scope.sumCreditClient,
+            periodCreditClient: $scope.periodCreditClient
         };
 
         var successCallBack = function(response){

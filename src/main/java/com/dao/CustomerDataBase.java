@@ -1,13 +1,14 @@
 package com.dao;
 
-import com.entity.tags.Customer;
+import com.entity.Customer;
 
 import java.util.List;
 
 public interface CustomerDataBase {
-    Customer addCustomer(Customer customer);
+    void addCustomer(Customer customer);
     void deleteCustomer(Customer customer);
     Customer getCustomer(Customer customer);
     void updateCustomer(Customer customer);
     List<Customer> getAll();
+    int getCountBank(String sum, String period);
 }

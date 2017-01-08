@@ -11,8 +11,8 @@
     <!-- call $scope.search() when submit is clicked. -->
     <form ng-submit="search()">
         <!-- will automatically update $scope.user.first_name and .last_name -->
-        <input type="text" ng-model="username">
-        <input type="text" ng-model="password">
+        <input type="text" ng-model="sumCreditClient">
+        <input type="text" ng-model="periodCreditClient">
         <input type="submit" value="search">
     </form>
 
@@ -21,7 +21,7 @@
         <ul>
             <!-- assuming our search returns an array of users matching the search -->
             <li ng-repeat="user in results">
-                {{username}} {{password}}
+                {{sumCreditClient}} {{periodCreditClient}}
             </li>
         </ul>
     </div>

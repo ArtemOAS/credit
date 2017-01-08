@@ -5,25 +5,25 @@ import com.sun.xml.internal.ws.developer.Serialization;
 public class DataCustomer {
 
     @Serialization
-    private String username;
+    private String sumCreditClient;
 
     @Serialization
-    private String password;
+    private String periodCreditClient;
 
-    public String getUsername(){
-        return this.username;
+    public String getSumCreditClient(){
+        return this.sumCreditClient;
     }
 
-    public void setUsername(String username){
-        this.username = username;
+    public void setSumCreditClient(String sumCreditClient){
+        this.sumCreditClient = sumCreditClient;
     }
 
-    public String getPassword(){
-        return this.password;
+    public String getPeriodCreditClient(){
+        return this.periodCreditClient;
     }
 
-    public void setPassword(String password){
-        this.password = password;
+    public void setPeriodCreditClient(String periodCreditClient){
+        this.periodCreditClient = periodCreditClient;
     }
 
 }

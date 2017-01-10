@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "data_credit")
-//@NamedQuery(name = "Customer.getdAll", query = "FROM Customer c")
+@NamedQuery(name = "Customer.getdAll", query = "FROM Customer c")
 public class Customer implements Serializable {
 
     @Id

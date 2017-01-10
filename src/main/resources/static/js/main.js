@@ -2,6 +2,7 @@
 var app = angular.module('app', []);
 // Define the `PhoneListController` controller on the `phonecatApp` module
 app.controller('appCtrl', ['$scope', '$http', function ($scope, $http) {
+    $scope.results = '';
 
     $scope.search = function(){
 
@@ -10,13 +11,11 @@ app.controller('appCtrl', ['$scope', '$http', function ($scope, $http) {
             periodCreditClient: $scope.periodCreditClient
         };
 
-        var successCallBack = function(response){
-            $scope.results = response.data;
-        };
-
-        var errorCallBack = function(response){
-            // error response found from server
-        };
-        $http.post('/resource/', data).then(successCallBack, errorCallBack);
+        $http.post('/resource/', data).then(
+            function(response){
+                results = response.data;
+                console.log(results);
+            }
+        );
     }
 }]);

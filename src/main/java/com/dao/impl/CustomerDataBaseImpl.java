@@ -7,6 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
@@ -50,7 +51,11 @@ public class CustomerDataBaseImpl implements CustomerDataBase {
 
     @Override
     public int getCountBank(String sum, String period) {
-        return  entityManager.createQuery(
-                "SELECT count(*) FROM data_bank.data_credit where sumCredit = '"+sum+"' and periodCredit = '"+period+"'").getFirstResult();
+        Query query = entityManager.createQuery(
+                "SELECT id FROM Customer where sumCredit = ?1 and periodCredit = ?2");
+        query.setParameter(1, sum);
+        query.setParameter(2, period);
+
+        return  query.getResultList().size();
     }
 }

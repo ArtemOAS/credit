@@ -27,12 +27,13 @@ public class CustomerController {
     @RequestMapping(value = "/resource/", method = RequestMethod.POST)
     public ResponseEntity<?> greetingForm(@RequestBody DataCustomer dataCustomer) {
 
-        customerDataBase.addCustomer(new Customer(dataCustomer.getSumCreditClient(), dataCustomer.getPeriodCreditClient(), "bank"));
+        int result = customerDataBase.getCountBank(dataCustomer.getSumCreditClient(), dataCustomer.getPeriodCreditClient());
+        System.out.println(result);
 
         if(!dataCustomer.getSumCreditClient().equals(null) && !dataCustomer.getPeriodCreditClient().equals(null)){
-            return new ResponseEntity<Integer>(0, HttpStatus.OK);
+            return new ResponseEntity<Integer>(result, HttpStatus.OK);
         } else {
-            return new ResponseEntity<Integer>(0, HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<Integer>(result, HttpStatus.BAD_REQUEST);
         }
     }
 

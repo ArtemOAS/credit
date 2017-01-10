@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html ng-app="app">
 <head>
-    <title>Getting Started: Handling Form Submission</title>
+    <title>Credit</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <script type="text/javascript" src="/lib/angular.min.js"></script>
     <script type="text/javascript" src="/js/main.js"></script>
@@ -21,7 +21,7 @@
         <ul>
             <!-- assuming our search returns an array of users matching the search -->
             <li ng-repeat="user in results">
-                {{sumCreditClient}} {{periodCreditClient}}
+                {{results}}
             </li>
         </ul>
     </div>

@@ -12,9 +12,6 @@ import org.testng.annotations.Test;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class TestHibernate {
-
-//    @Autowired
-//    CustomerDataBase customerDataBase;
     ApplicationContext applicationContext = new AnnotationConfigApplicationContext(Application.class);
 
 

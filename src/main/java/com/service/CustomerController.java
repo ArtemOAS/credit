@@ -28,7 +28,6 @@ public class CustomerController {
     public ResponseEntity<?> greetingForm(@RequestBody DataCustomer dataCustomer) {
 
         int result = customerDataBase.getCountBank(dataCustomer.getSumCreditClient(), dataCustomer.getPeriodCreditClient());
-        System.out.println(result);
 
         if(!dataCustomer.getSumCreditClient().equals(null) && !dataCustomer.getPeriodCreditClient().equals(null)){
             return new ResponseEntity<Integer>(result, HttpStatus.OK);

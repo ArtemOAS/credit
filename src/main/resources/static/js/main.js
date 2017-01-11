@@ -13,8 +13,7 @@ app.controller('appCtrl', ['$scope', '$http', function ($scope, $http) {
 
         $http.post('/resource/', data).then(
             function(response){
-                results = response.data;
-                console.log(results);
+                $scope.results = response.data.toString();
             }
         );
     }

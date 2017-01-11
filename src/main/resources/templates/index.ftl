@@ -20,7 +20,7 @@
         Results:
         <ul>
             <!-- assuming our search returns an array of users matching the search -->
-            <li ng-repeat="user in results">
+            <li>
                 {{results}}
             </li>
         </ul>

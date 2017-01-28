@@ -22,4 +22,6 @@ public class TestHibernate {
             customerDataBase.getCustomer(new Customer("10", "10", "bank"));
         }
     }
+
+
 }

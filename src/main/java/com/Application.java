@@ -12,6 +12,7 @@ public class Application extends WebMvcConfigurerAdapter {
 		}catch (Exception e){
 			e.printStackTrace();
 		}
+
 	}
 
 }

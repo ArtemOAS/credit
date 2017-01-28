@@ -50,12 +50,13 @@ public class CustomerDataBaseImpl implements CustomerDataBase {
     }
 
     @Override
-    public int getCountBank(String sum, String period) {
-        Query query = entityManager.createQuery(
-                "SELECT id FROM Customer where sumCredit = ?1 and periodCredit = ?2");
+    @Transactional
+    public long getCountBank(String sum, String period) {
+        TypedQuery<Long> query = entityManager.createQuery(
+                "SELECT COUNT(c) FROM Customer c where c.sumCredit = ?1 and c.periodCredit = ?2", Long.class);
         query.setParameter(1, sum);
         query.setParameter(2, period);
 
-        return  query.getResultList().size();
+        return query.getSingleResult();
     }
 }

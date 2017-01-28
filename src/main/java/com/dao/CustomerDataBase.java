@@ -10,5 +10,6 @@ public interface CustomerDataBase {
     Customer getCustomer(Customer customer);
     void updateCustomer(Customer customer);
     List<Customer> getAll();
-    int getCountBank(String sum, String period);
+    long getCountBank(String sum, String period);
+
 }

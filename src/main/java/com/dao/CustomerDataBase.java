@@ -1,6 +1,6 @@
 package com.dao;
 
-import com.entity.Customer;
+import com.dto.Customer;
 
 import java.util.List;
 

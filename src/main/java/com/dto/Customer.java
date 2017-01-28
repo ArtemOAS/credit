@@ -1,4 +1,4 @@
-package com.entity;
+package com.dto;
 
 
 import javax.persistence.*;
@@ -11,7 +11,7 @@ public class Customer implements Serializable {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private int id;
+    private int id ;
 
     @Column(name = "sum_credit")
     private String sumCredit;

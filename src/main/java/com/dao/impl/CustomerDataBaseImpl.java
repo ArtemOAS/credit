@@ -1,13 +1,12 @@
 package com.dao.impl;
 
 import com.dao.CustomerDataBase;
-import com.entity.Customer;
+import com.dto.Customer;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import java.util.List;
 

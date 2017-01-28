@@ -1,4 +1,4 @@
-package com.entity;
+package com.dto;
 
 public class DataCustomer {
     private String sumCreditClient;

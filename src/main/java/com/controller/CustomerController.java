@@ -1,7 +1,7 @@
-package com.service;
+package com.controller;
 
 import com.dao.CustomerDataBase;
-import com.entity.DataCustomer;
+import com.dto.DataCustomer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class CustomerController {
 
     @Autowired
-    CustomerDataBase customerDataBase;
+    private CustomerDataBase customerDataBase;
 
     @RequestMapping(value = "/")
     public String main() {

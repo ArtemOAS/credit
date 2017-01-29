@@ -2,7 +2,7 @@
 <html ng-app="app">
 <head>
     <title>Credit</title>
-    <link href="../static/css/index.css" rel="stylesheet" />
+    <link href="/css/index.css" rel="stylesheet" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <script type="text/javascript" src="/lib/angular.min.js"></script>
     <script type="text/javascript" src="/js/main.js"></script>
@@ -11,26 +11,27 @@
 <body ng-controller="appCtrl">
 <div>
 
+    <div class="logo">
+        <h1>CREDIT</h1>
+    </div>
     <!-- call $scope.search() when submit is clicked. -->
     <form ng-submit="search()">
         <!-- will automatically update $scope.user.first_name and .last_name -->
+        <div class="sumCreditClient">
+            Summa:
+            <input type="text" ng-model="sumCreditClient"/>
+        </div>
+        <div class="periodCreditClient">
+            Date:
+            <input type="text" ng-model="periodCreditClient"/>
+        </div>
         <label>
-            <input type="text" ng-model="sumCreditClient">
+            <button class="search_bank" type="submit" value="search">Search</button>
         </label>
-        <label>
-            <input type="text" ng-model="periodCreditClient">
-        </label>
-        <input type="submit" value="search">
     </form>
 
-    <div>
-        Results:
-        <ul>
-            <!-- assuming our search returns an array of users matching the search -->
-            <li>
-                {{results}}
-            </li>
-        </ul>
+    <div class="resultBanks">
+       Bank(s): {{results}}
     </div>
 
 </div>

@@ -1,11 +1,36 @@
 html{
-    padding:0pt;
-    margin:0pt;
+    background-color: aliceblue;
 }
-body{
-    color:#333333;
-    margin:15px 30px;
-    font-family:Helvetica,Arial,Freesans,Clean,Sans-serif;
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
+div[class*='logo'] {
+    font-family: "Times New Roman", Times, serif;
+    font-size:10px;
+    color:brown
+}
+div[class*='resultBanks'] {
+    font-family: "Times New Roman", Times, serif;
+    font-size:25px;
+    color:brown
+}
+input {
+    -webkit-appearance: textfield;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    user-select: text;
+    cursor: auto;
+    padding: 2px;
+    margin: 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+}
+button{
+    background-color:#3CB371;
+    border-color: #3CB371;
+    color: white;
+    width: 6em;
+    height: 2.8em;
+    border-radius: 4px;
+    position: relative;
+    margin:2px;
 }

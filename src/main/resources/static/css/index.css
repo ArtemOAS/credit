@@ -1,0 +1,11 @@
+html{
+    padding:0pt;
+    margin:0pt;
+}
+body{
+    color:#333333;
+    margin:15px 30px;
+    font-family:Helvetica,Arial,Freesans,Clean,Sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+}

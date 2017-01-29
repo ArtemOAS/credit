@@ -2,10 +2,12 @@
 <html ng-app="app">
 <head>
     <title>Credit</title>
+    <link href="../static/css/index.css" rel="stylesheet" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <script type="text/javascript" src="/lib/angular.min.js"></script>
     <script type="text/javascript" src="/js/main.js"></script>
 </head>
+
 <body ng-controller="appCtrl">
 <div>
 

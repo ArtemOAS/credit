@@ -1,6 +1,6 @@
 package com.dto;
 
-public class DataCustomer {
+public class DataCredit {
     private String sumCreditClient;
     private String periodCreditClient;
 

@@ -17,20 +17,20 @@
     <!-- call $scope.search() when submit is clicked. -->
     <form ng-submit="search()">
         <!-- will automatically update $scope.user.first_name and .last_name -->
-        <div class="sumCreditClient">
+        <div id="sum" class="sumCreditClient">
             Summa:
-            <input type="text" ng-model="sumCreditClient"/>
+            <input type="range" name="range" ng-model="valueSum" min="{{minSum}}"  max="{{maxSum}}">
         </div>
-        <div class="periodCreditClient">
+        <div id="period" class="periodCreditClient">
             Date:
-            <input type="text" ng-model="periodCreditClient"/>
+            <input type="range" name="range" ng-model="valuePeriod" min="{{minPeriod}}"  max="{{maxPeriod}}">
         </div>
         <label>
-            <button class="search_bank" type="submit" value="search">Search</button>
+            <button id="search" class="search_bank" type="submit" value="search">Search</button>
         </label>
     </form>
 
-    <div class="resultBanks">
+    <div id="result" class="resultBanks">
        Bank(s): {{results}}
     </div>
 

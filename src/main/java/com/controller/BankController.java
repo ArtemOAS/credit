@@ -24,7 +24,7 @@ public class BankController {
 
     @RequestMapping(value = "/resource/", method = RequestMethod.POST)
     public ResponseEntity<?> creditDataForm(@RequestBody DataCredit dataCredit) {
-        return bank.getBank(dataCredit.getSumCreditClient(), dataCredit.getPeriodCreditClient());
+        return bank.getBank(dataCredit.getValueSum(), dataCredit.getValuePeriod());
     }
 
 }

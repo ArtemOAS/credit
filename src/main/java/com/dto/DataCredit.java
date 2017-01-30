@@ -1,23 +1,22 @@
 package com.dto;
 
 public class DataCredit {
-    private String sumCreditClient;
-    private String periodCreditClient;
+    private String valueSum;
+    private String valuePeriod;
 
-    public String getSumCreditClient(){
-        return this.sumCreditClient;
+    public String getValueSum() {
+        return valueSum;
     }
 
-    public void setSumCreditClient(String sumCreditClient){
-        this.sumCreditClient = sumCreditClient;
+    public void setValueSum(String valueSum) {
+        this.valueSum = valueSum;
     }
 
-    public String getPeriodCreditClient(){
-        return this.periodCreditClient;
+    public String getValuePeriod() {
+        return valuePeriod;
     }
 
-    public void setPeriodCreditClient(String periodCreditClient){
-        this.periodCreditClient = periodCreditClient;
+    public void setValuePeriod(String valuePeriod) {
+        this.valuePeriod = valuePeriod;
     }
-
 }

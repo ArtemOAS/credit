@@ -1,6 +1,5 @@
 package com.dto;
 
-
 import javax.persistence.*;
 import java.io.Serializable;
 

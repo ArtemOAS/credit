@@ -11,18 +11,8 @@ div[class*='resultBanks'] {
     font-size:25px;
     color:brown
 }
-input {
-    -webkit-appearance: textfield;
-    background-color: white;
-    -webkit-rtl-ordering: logical;
-    user-select: text;
-    cursor: auto;
-    padding: 2px;
-    margin: 2px;
-    border-width: 2px;
-    border-style: inset;
-    border-color: initial;
-    border-image: initial;
+input{
+
 }
 button{
     background-color:#3CB371;

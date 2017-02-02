@@ -17,21 +17,22 @@
     <div class="logo">
         <h1>CREDIT</h1>
     </div>
-    <!-- call $scope.search() when submit is clicked. -->
 
+    <!-- call $scope.search() when submit is clicked. -->
     <form ng-submit="search()">
-        <!-- will automatically update $scope.user.first_name and .last_name -->
 
         <div id="sum" class="sumCreditClient">
             Sum:
             <rzslider rz-slider-model="sliderSum.valueSum" rz-slider-options="sliderSum.optionsSum"></rzslider>
         </div>
+
         <div id="period" class="periodCreditClient">
             Date:
-            <rzslider rz-slider-model="sliderPeriod.valuePeriod"
-                      rz-slider-options="sliderPeriod.optionsPeriod"></rzslider>
+            <rzslider rz-slider-model="sliderPeriod.valuePeriod" rz-slider-options="sliderPeriod.optionsPeriod"></rzslider>
         </div>
+
         <button id="search" class="search_bank" type="submit" value="search">Search</button>
+
     </form>
 
     <div id="result" class="resultBanks">

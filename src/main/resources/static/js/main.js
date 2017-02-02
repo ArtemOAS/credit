@@ -2,6 +2,20 @@ var app = angular.module('app', ['rzModule', 'ui.bootstrap']);
 app.controller('appCtrl', ['$scope', '$http', function ($scope, $http) {
     $scope.results = '';
 
+    $scope.search = function(){
+
+        var data = {
+            valueSum: $scope.sliderSum.valueSum,
+            valuePeriod: $scope.sliderPeriod.valuePeriod
+        };
+
+        $http.post('/resource/', data).then(
+            function(response){
+                $scope.results = response.data.toString();
+            }
+        );
+    };
+
     $scope.sliderSum = {
         valueSum: 1000,
         optionsSum: {
@@ -24,18 +38,4 @@ app.controller('appCtrl', ['$scope', '$http', function ($scope, $http) {
         }
     };
 
-    $scope.search = function(){
-
-        var data = {
-            valueSum: $scope.sliderSum.valueSum,
-            valuePeriod: $scope.sliderPeriod.valuePeriod
-        };
-
-        console.log(data.valueSum);
-        $http.post('/resource/', data).then(
-            function(response){
-                $scope.results = response.data.toString();
-            }
-        );
-    }
 }]);

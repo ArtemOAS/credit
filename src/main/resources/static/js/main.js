@@ -1,20 +1,34 @@
-var app = angular.module('app', []);
+var app = angular.module('app', ['rzModule', 'ui.bootstrap']);
 app.controller('appCtrl', ['$scope', '$http', function ($scope, $http) {
     $scope.results = '';
 
-    $scope.valueSum = 10;
-    $scope.minSum = 10;
-    $scope.maxSum = 1000000;
+    $scope.sliderSum = {
+        valueSum: 1000,
+        optionsSum: {
+            floor: 0,
+            ceil: 100000000,
+            step: 1000,
+            minLimit: 1000,
+            maxLimit: 100000000
+        }
+    };
 
-    $scope.valuePeriod = 6;
-    $scope.minPeriod = 1;
-    $scope.maxPeriod = 60;
+    $scope.sliderPeriod = {
+        valuePeriod: 1,
+        optionsPeriod: {
+            floor: 0,
+            ceil: 60,
+            step: 1,
+            minLimit: 1,
+            maxLimit: 60
+        }
+    };
 
     $scope.search = function(){
 
         var data = {
-            valueSum: $scope.valueSum,
-            valuePeriod: $scope.valuePeriod
+            valueSum: $scope.sliderSum.valueSum,
+            valuePeriod: $scope.sliderPeriod.valuePeriod
         };
 
         console.log(data.valueSum);

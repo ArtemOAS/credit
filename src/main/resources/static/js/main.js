@@ -19,7 +19,7 @@ app.controller('appCtrl', ['$scope', '$http', function ($scope, $http) {
     $scope.sliderSum = {
         valueSum: 1000,
         optionsSum: {
-            floor: 0,
+            floor: 1000,
             ceil: 100000000,
             step: 1000,
             minLimit: 1000,
@@ -30,7 +30,7 @@ app.controller('appCtrl', ['$scope', '$http', function ($scope, $http) {
     $scope.sliderPeriod = {
         valuePeriod: 1,
         optionsPeriod: {
-            floor: 0,
+            floor: 1,
             ceil: 60,
             step: 1,
             minLimit: 1,

@@ -23,7 +23,7 @@
         <!-- will automatically update $scope.user.first_name and .last_name -->
 
         <div id="sum" class="sumCreditClient">
-            Summ:
+            Sum:
             <rzslider rz-slider-model="sliderSum.valueSum" rz-slider-options="sliderSum.optionsSum"></rzslider>
         </div>
         <div id="period" class="periodCreditClient">

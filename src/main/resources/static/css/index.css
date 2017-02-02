@@ -11,16 +11,13 @@ div[class*='resultBanks'] {
     font-size:25px;
     color:brown
 }
-input{
-    width: 200px;
-    height: 15px;
-    margin: 15px;
-}
 div[class*='sumCreditClient']{
-    margin-left: 0px;
+    margin-left: 18px;
+    width: 400px;
 }
 div[class*='periodCreditClient']{
     margin-left: 18px;
+    width: 400px;
 }
 button{
     background-color:#3CB371;

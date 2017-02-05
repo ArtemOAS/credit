@@ -2,19 +2,19 @@ var app = angular.module('app', ['rzModule', 'ui.bootstrap']);
 app.controller('appCtrl', ['$scope', '$http', function ($scope, $http) {
     $scope.results = '';
 
-    //$scope.search = function(){
-    //
-    //    var data = {
-    //        valueSum: $scope.sliderSum.valueSum,
-    //        valuePeriod: $scope.sliderPeriod.valuePeriod
-    //    };
-    //
-    //    $http.post('/resource/', data).then(
-    //        function (response) {
-    //            $scope.results = response.data.toString();
-    //        }
-    //    );
-    //};
+    $scope.search = function(){
+
+        var data = {
+            valueSum: $scope.sliderSum.valueSum,
+            valuePeriod: $scope.sliderPeriod.valuePeriod
+        };
+
+        $http.post('/resource/', data).then(
+            function (response) {
+                $scope.results = response.data.toString();
+            }
+        );
+    };
 
     $scope.sliderSum = {
         valueSum: 1000,
@@ -27,18 +27,7 @@ app.controller('appCtrl', ['$scope', '$http', function ($scope, $http) {
             translate: function(value) {
                 return value+' руб';
             },
-            onChange: function(value) {
-                var data = {
-                    valueSum: $scope.sliderSum.valueSum,
-                    valuePeriod: $scope.sliderPeriod.valuePeriod
-                };
-
-                $http.post('/resource/', data).then(
-                    function (response) {
-                        $scope.results = response.data.toString();
-                    }
-                );
-            },
+            onChange:  $scope.search,
         }
     };
 
@@ -53,33 +42,10 @@ app.controller('appCtrl', ['$scope', '$http', function ($scope, $http) {
             translate: function(value) {
                 return value+' недель';
             },
-            onChange: function(value) {
-                var data = {
-                    valueSum: $scope.sliderSum.valueSum,
-                    valuePeriod: $scope.sliderPeriod.valuePeriod
-                };
-
-                $http.post('/resource/', data).then(
-                    function (response) {
-                        $scope.results = response.data.toString();
-                    }
-                );
-            },
+            onChange:  $scope.search,
         }
     };
 
-    angular.element(document).ready(function(){
-
-        var data = {
-            valueSum: $scope.sliderSum.valueSum,
-            valuePeriod: $scope.sliderPeriod.valuePeriod
-        };
-
-        $http.post('/resource/', data).then(
-            function (response) {
-                $scope.results = response.data.toString();
-            }
-        );
-    });
+    angular.element(document).ready($scope.search);
 
 }]);

@@ -1,44 +1,46 @@
 package com.service;
 
-import com.dao.Bank;
-import com.dto.Credit;
+import com.dao.BankDao;
+import com.entity.CreditEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service("bankService")
-public class BankService implements Bank {
+@Transactional
+public class BankService implements BankDao {
 
     @Qualifier("bankRepository")
     @Autowired
-    private Bank bank;
+    private BankDao bank;
 
     @Override
-    public void addBank(Credit credit) {
+    public void addBank(CreditEntity creditEntity) {
 
     }
 
     @Override
-    public void deleteBank(Credit credit) {
+    public void deleteBank(CreditEntity creditEntity) {
 
     }
 
     @Override
-    public Credit getBank(Credit credit) {
+    public CreditEntity getBank(CreditEntity creditEntity) {
         return null;
     }
 
     @Override
-    public void updateBank(Credit credit) {
+    public void updateBank(CreditEntity creditEntity) {
 
     }
 
     @Override
-    public List<Credit> getAll() {
+    public List<CreditEntity> getAll() {
         return null;
     }
 

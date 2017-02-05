@@ -1,10 +1,9 @@
 package com.dao.impl;
 
-import com.dao.Bank;
-import com.dto.Credit;
+import com.dao.BankDao;
+import com.entity.CreditEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -12,47 +11,41 @@ import javax.persistence.TypedQuery;
 import java.util.List;
 
 @Repository("bankRepository")
-public class BankImpl implements Bank {
+public class BankDaoImpl implements BankDao {
 
     @PersistenceContext
     private EntityManager entityManager;
 
     @Override
-    @Transactional
-    public void addBank(Credit credit) {
-        entityManager.persist(credit);
+    public void addBank(CreditEntity creditEntity) {
+        entityManager.persist(creditEntity);
     }
 
     @Override
-    @Transactional
-    public void deleteBank(Credit credit) {
-        entityManager.remove(getBank(credit));
+    public void deleteBank(CreditEntity creditEntity) {
+        entityManager.remove(getBank(creditEntity));
     }
 
     @Override
-    @Transactional
-    public Credit getBank(Credit credit) {
-        return entityManager.find(Credit.class, credit);
+    public CreditEntity getBank(CreditEntity creditEntity) {
+        return entityManager.find(CreditEntity.class, creditEntity);
     }
 
     @Override
-    @Transactional
-    public void updateBank(Credit credit) {
-        entityManager.merge(credit);
+    public void updateBank(CreditEntity creditEntity) {
+        entityManager.merge(creditEntity);
     }
 
     @Override
-    @Transactional
-    public List<Credit> getAll() {
-        TypedQuery<Credit> namedQuery = entityManager.createNamedQuery("Customer.getdAll", Credit.class);
+    public List<CreditEntity> getAll() {
+        TypedQuery<CreditEntity> namedQuery = entityManager.createNamedQuery("Customer.getdAll", CreditEntity.class);
         return namedQuery.getResultList();
     }
 
     @Override
-    @Transactional
     public long getCountBank(String sum, String period) {
         TypedQuery<Long> query = entityManager.createQuery(
-                "SELECT COUNT(c) FROM Credit c where c.sumCredit = ?1 and c.periodCredit = ?2", Long.class);
+                "SELECT COUNT(c) FROM CreditEntity c where c.sumCredit = ?1 and c.periodCredit = ?2", Long.class);
         query.setParameter(1, sum);
         query.setParameter(2, period);
 

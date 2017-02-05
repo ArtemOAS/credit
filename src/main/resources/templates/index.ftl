@@ -15,7 +15,7 @@
 <div>
 
     <!-- call $scope.search() when submit is clicked. -->
-    <form>
+    <form id="search">
 
         <div id="sum" class="sumCreditClient"  >
             Сумма:

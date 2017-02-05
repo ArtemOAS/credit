@@ -1,7 +1,7 @@
 package com;
 
-import com.dao.Bank;
-import com.dto.Credit;
+import com.dao.BankDao;
+import com.entity.CreditEntity;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
@@ -18,8 +18,8 @@ public class TestHibernate {
     @Test
     public void test(){
         for (int i = 0; i<15; i++){
-            Bank bank = applicationContext.getBean(Bank.class);
-            bank.getBank(new Credit("10", "10", "bank"));
+            BankDao bankDao = applicationContext.getBean(BankDao.class);
+            bankDao.getBank(new CreditEntity("10", "10", "bankDao"));
         }
     }
 

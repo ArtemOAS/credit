@@ -1,12 +1,12 @@
-package com.dto;
+package com.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
 @Table(name = "data_credit")
-@NamedQuery(name = "Customer.getdAll", query = "FROM Credit c")
-public class Credit implements Serializable {
+@NamedQuery(name = "Customer.getdAll", query = "FROM CreditEntity c")
+public class CreditEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
@@ -21,18 +21,18 @@ public class Credit implements Serializable {
     @Column(name = "bank")
     private String bank;
 
-    public Credit(String sumCredit, String periodCredit, String bank) {
+    public CreditEntity(String sumCredit, String periodCredit, String bank) {
         this.sumCredit = sumCredit;
         this.periodCredit = periodCredit;
         this.bank = bank;
     }
 
-    public Credit(String sumCredit, String periodCredit) {
+    public CreditEntity(String sumCredit, String periodCredit) {
         this.sumCredit = sumCredit;
         this.periodCredit = periodCredit;
     }
 
-    public Credit() {
+    public CreditEntity() {
     }
 
 

@@ -1,7 +1,7 @@
 package com.controller;
 
-import com.dao.Bank;
-import com.dto.DataCredit;
+import com.dao.BankDao;
+import com.dto.DataCreditDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +15,7 @@ public class BankController {
 
     @Qualifier("bankService")
     @Autowired
-    private Bank bank;
+    private BankDao bank;
 
     @RequestMapping(value = "/")
     public String main() {
@@ -23,8 +23,8 @@ public class BankController {
     }
 
     @RequestMapping(value = "/resource/", method = RequestMethod.POST)
-    public ResponseEntity<?> creditDataForm(@RequestBody DataCredit dataCredit) {
-        return bank.getBank(dataCredit.getValueSum(), dataCredit.getValuePeriod());
+    public ResponseEntity<?> creditDataForm(@RequestBody DataCreditDto dataCreditDto) {
+        return bank.getBank(dataCreditDto.getValueSum(), dataCreditDto.getValuePeriod());
     }
 
 }

@@ -14,30 +14,26 @@
 <body ng-controller="appCtrl">
 <div>
 
-    <div class="logo">
-        <h1>CREDIT</h1>
-    </div>
-
     <!-- call $scope.search() when submit is clicked. -->
-    <form ng-submit="search()">
+    <form>
 
-        <div id="sum" class="sumCreditClient">
-            Sum:
-            <rzslider rz-slider-model="sliderSum.valueSum" rz-slider-options="sliderSum.optionsSum"></rzslider>
+        <div id="sum" class="sumCreditClient"  >
+            Сумма:
+            <rzslider rz-slider-model="sliderSum.valueSum" rz-slider-options="sliderSum.optionsSum" callback='callback1'></rzslider>
         </div>
 
-        <div id="period" class="periodCreditClient">
-            Date:
+        <div id="period" class="periodCreditClient" >
+            Срок:
             <rzslider rz-slider-model="sliderPeriod.valuePeriod" rz-slider-options="sliderPeriod.optionsPeriod"></rzslider>
         </div>
-
-        <button id="search" class="search_bank" type="submit" value="search">Search</button>
 
     </form>
 
     <div id="result" class="resultBanks">
         Bank(s): {{results}}
     </div>
+
+    <button id="search" class="search_bank" type="submit" value="search">Подтвердить</button>
 
 </div>
 </body>

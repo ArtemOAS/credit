@@ -1,5 +1,5 @@
 var app = angular.module('app', ['rzModule', 'ui.bootstrap']);
-app.controller('appCtrl', ['$scope', '$http', function ($scope, $http) {
+app.controller('appCtrl', ['$scope', '$http', '$window', '$location', function ($scope, $http, $window, $location) {
     $scope.results = '';
 
     $scope.search = function(){
@@ -17,7 +17,7 @@ app.controller('appCtrl', ['$scope', '$http', function ($scope, $http) {
     };
 
     $scope.sliderSum = {
-        valueSum: 1000,
+        valueSum: 12000,
         optionsSum: {
             floor: 1000,
             ceil: 3000000,
@@ -32,7 +32,7 @@ app.controller('appCtrl', ['$scope', '$http', function ($scope, $http) {
     };
 
     $scope.sliderPeriod = {
-        valuePeriod: 1,
+        valuePeriod: 24,
         optionsPeriod: {
             floor: 1,
             ceil: 480,
@@ -40,12 +40,22 @@ app.controller('appCtrl', ['$scope', '$http', function ($scope, $http) {
             minLimit: 1,
             maxLimit: 480,
             translate: function(value) {
-                return value+' недель';
+                if (value==1){
+                    return value+' день';
+                }else if (value>1&&value<5){
+                    return value+' дня'
+                }else {
+                    return value+' дней';
+                }
             },
             onChange:  $scope.search,
         }
     };
 
     angular.element(document).ready($scope.search);
+
+    $scope.redirect = function() {
+        $window.location.href='http://xn----7sbgjeqdny1agesg7l.xn--p1ai/';
+    };
 
 }]);

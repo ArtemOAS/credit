@@ -14,26 +14,33 @@
 <body ng-controller="appCtrl">
 <div>
 
-    <!-- call $scope.search() when submit is clicked. -->
+    <h2>Подбор онлайн займа</h2>
+
     <form id="search">
 
         <div id="sum" class="sumCreditClient"  >
-            Сумма:
-            <rzslider rz-slider-model="sliderSum.valueSum" rz-slider-options="sliderSum.optionsSum" callback='callback1'></rzslider>
+            Сумма:<rzslider rz-slider-model="sliderSum.valueSum" rz-slider-options="sliderSum.optionsSum" callback='callback1'></rzslider>
         </div>
 
         <div id="period" class="periodCreditClient" >
-            Срок:
-            <rzslider rz-slider-model="sliderPeriod.valuePeriod" rz-slider-options="sliderPeriod.optionsPeriod"></rzslider>
+            Срок:<rzslider rz-slider-model="sliderPeriod.valuePeriod" rz-slider-options="sliderPeriod.optionsPeriod"></rzslider>
         </div>
 
     </form>
 
-    <div id="result" class="resultBanks">
-        Bank(s): {{results}}
-    </div>
+    <#--<div id="result" class="resultBanks">-->
+        <#--Количество доступных предложений: {{results}}-->
+    <#--</div>-->
 
-    <button id="search" class="search_bank" type="submit" value="search">Подтвердить</button>
+    <div class="submit_bank">
+
+        <div id="result" class="resultBanks">
+            Количество доступных предложений: {{results}}
+            <button id="submit" class="redirect" ng-click="redirect()">
+                Сравнить
+            </button>
+        </div>
+    </div>
 
 </div>
 </body>

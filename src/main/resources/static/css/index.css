@@ -4,12 +4,17 @@ html{
 div[class*='logo'] {
     font-family: "Times New Roman", Times, serif;
     font-size:10px;
-    color:brown
+    color:brown;
+    margin-right: 18px;
 }
 div[class*='resultBanks'] {
     font-family: "Times New Roman", Times, serif;
-    font-size:25px;
+    font-size:15px;
     color:brown
+}
+div[class*='redirect']{
+    margin-left: 18px;
+    width: 400px;
 }
 div[class*='sumCreditClient']{
     margin-left: 18px;
@@ -23,8 +28,8 @@ button{
     background-color:#3CB371;
     border-color: #3CB371;
     color: white;
-    width: 8em;
-    height: 2.8em;
+    /*width: 8em;*/
+    /*height: 2.8em;*/
     border-radius: 4px;
     position: relative;
     margin:2px;

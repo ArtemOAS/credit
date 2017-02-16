@@ -9,6 +9,12 @@
     <script type="text/javascript" src="/js/main.js"></script>
     <script type="text/javascript" src="/lib/rzslider.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 
 <body ng-controller="appCtrl">
@@ -19,7 +25,7 @@
     <form id="search">
 
         <div id="sum" class="sumCreditClient"  >
-            Сумма:<rzslider rz-slider-model="sliderSum.valueSum" rz-slider-options="sliderSum.optionsSum" callback='callback1'></rzslider>
+            Сумма:<rzslider rz-slider-model="sliderSum.valueSum" rz-slider-options="sliderSum.optionsSum"></rzslider>
         </div>
 
         <div id="period" class="periodCreditClient" >
@@ -28,18 +34,9 @@
 
     </form>
 
-    <#--<div id="result" class="resultBanks">-->
-        <#--Количество доступных предложений: {{results}}-->
-    <#--</div>-->
-
-    <div class="submit_bank">
-
-        <div id="result" class="resultBanks">
-            Количество доступных предложений: {{results}}
-            <button id="submit" class="redirect" ng-click="redirect()">
-                Сравнить
-            </button>
-        </div>
+    <div class="row">
+        <pre class="col-sm-3">Количество доступных предложений: {{results}}</pre>
+        <button type="button" class="btn btn-info" ng-click="redirect()">Сравнить</button>
     </div>
 
 </div>

@@ -27,7 +27,12 @@ app.controller('appCtrl', ['$scope', '$http', '$window', '$location', function (
             translate: function(value) {
                 return value+' руб';
             },
-            onChange:  $scope.search,
+            onChange: $scope.search,
+            showSelectionBar: true,
+            selectionBarGradient: {
+                from: '#FC0',
+                to: '#FC0'
+            }
         }
     };
 
@@ -48,11 +53,14 @@ app.controller('appCtrl', ['$scope', '$http', '$window', '$location', function (
                     return value+' дней';
                 }
             },
-            onChange:  $scope.search,
+            onChange: $scope.search,
+            showSelectionBar: true,
+            selectionBarGradient: {
+                from: '#FC0',
+                to: '#FC0'
+            }
         }
     };
-
-    angular.element(document).ready($scope.search);
 
     $scope.redirect = function() {
         $window.location.href='http://xn----7sbgjeqdny1agesg7l.xn--p1ai/';

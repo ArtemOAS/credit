@@ -28,9 +28,19 @@ button{
     background-color:#3CB371;
     border-color: #3CB371;
     color: white;
-    /*width: 8em;*/
-    /*height: 2.8em;*/
     border-radius: 4px;
     position: relative;
     margin:2px;
+}
+div[class*='row'] {
+    font-family: "Times New Roman", Times, serif;
+    font-size:15px;
+    margin: 15px;
+    margin-left:25px;
+}
+button[class*='btn btn-info']{
+    height:38px;
+}
+pre[class*="col-sm-3"]{
+    width:290px;
 }

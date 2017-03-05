@@ -77,6 +77,8 @@
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/slf4j/jul-to-slf4j/1.7.21/jul-to-slf4j-1.7.21.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.8.4/jackson-core-2.8.4.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/slf4j/log4j-over-slf4j/1.7.21/log4j-over-slf4j-1.7.21.jar" path-in-jar="/" />
+      <element id="javaee-facet-resources" facet="credit_application/web/Web" />
+      <element id="jpa-descriptors" facet="credit_application/jpa/JPA" />
     </root>
   </artifact>
 </component>

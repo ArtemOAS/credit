@@ -1,6 +1,6 @@
 var app = angular.module('app', ['rzModule', 'ui.bootstrap']);
 app.controller('appCtrl', ['$scope', '$http', '$window', '$location', function ($scope, $http, $window, $location) {
-    $scope.results = '';
+    $scope.results = '0';
 
     $scope.search = function(){
 
@@ -17,13 +17,13 @@ app.controller('appCtrl', ['$scope', '$http', '$window', '$location', function (
     };
 
     $scope.sliderSum = {
-        valueSum: 12000,
+        valueSum: 5000,
         optionsSum: {
             floor: 1000,
-            ceil: 3000000,
+            ceil: 50000,
             step: 1000,
             minLimit: 1000,
-            maxLimit: 3000000,
+            maxLimit: 50000,
             translate: function(value) {
                 return value+' руб';
             },
@@ -37,13 +37,13 @@ app.controller('appCtrl', ['$scope', '$http', '$window', '$location', function (
     };
 
     $scope.sliderPeriod = {
-        valuePeriod: 24,
+        valuePeriod: 14,
         optionsPeriod: {
             floor: 1,
-            ceil: 480,
+            ceil: 30,
             step: 1,
             minLimit: 1,
-            maxLimit: 480,
+            maxLimit: 30,
             translate: function(value) {
                 if (value==1){
                     return value+' день';

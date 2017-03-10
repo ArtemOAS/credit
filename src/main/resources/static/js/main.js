@@ -20,10 +20,10 @@ app.controller('appCtrl', ['$scope', '$http', '$window', '$location', function (
         valueSum: 5000,
         optionsSum: {
             floor: 1000,
-            ceil: 50000,
+            ceil: 30000,
             step: 1000,
             minLimit: 1000,
-            maxLimit: 50000,
+            maxLimit: 30000,
             translate: function(value) {
                 return value+' руб';
             },
@@ -61,8 +61,6 @@ app.controller('appCtrl', ['$scope', '$http', '$window', '$location', function (
             }
         }
     };
-
-    angular.element(document).ready($scope.search);
 
     $scope.redirect = function() {
         $window.location.href='http://xn----7sbgjeqdny1agesg7l.xn--p1ai/';

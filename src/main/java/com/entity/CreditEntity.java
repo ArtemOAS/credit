@@ -67,4 +67,27 @@ public class CreditEntity implements Serializable {
     public void setBank(String bank) {
         this.bank = bank;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        CreditEntity that = (CreditEntity) o;
+
+        if (id != that.id) return false;
+        if (!sumCredit.equals(that.sumCredit)) return false;
+        if (!periodCredit.equals(that.periodCredit)) return false;
+        return bank.equals(that.bank);
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id;
+        result = 31 * result + sumCredit.hashCode();
+        result = 31 * result + periodCredit.hashCode();
+        result = 31 * result + bank.hashCode();
+        return result;
+    }
 }

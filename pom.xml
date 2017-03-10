@@ -7,10 +7,7 @@
     <groupId>credit_application</groupId>
     <artifactId>credit_application</artifactId>
     <version>1.0</version>
-    <modules>
-        <module>graber</module>
-    </modules>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
     <parent>
         <groupId>org.springframework.boot</groupId>

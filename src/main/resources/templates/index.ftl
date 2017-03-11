@@ -25,17 +25,20 @@
     <form id="search">
 
         <div id="sum" class="sumCreditClient"  >
-            Сумма:<rzslider rz-slider-model="sliderSum.valueSum" rz-slider-options="sliderSum.optionsSum"></rzslider>
+
+            <h4>Сумма:</h4>
+            <rzslider rz-slider-model="sliderSum.valueSum" rz-slider-options="sliderSum.optionsSum"></rzslider>
         </div>
 
         <div id="period" class="periodCreditClient" >
-            Срок:<rzslider rz-slider-model="sliderPeriod.valuePeriod" rz-slider-options="sliderPeriod.optionsPeriod"></rzslider>
+            <h4>Срок:</h4>
+            <rzslider rz-slider-model="sliderPeriod.valuePeriod" rz-slider-options="sliderPeriod.optionsPeriod"></rzslider>
         </div>
 
     </form>
 
     <div class="row">
-        <pre class="col-sm-3">Количество доступных предложений: {{results}}</pre>
+        <pre class="col-sm-3">Количество<br/>доступных<br/>предложений: <div id="results">{{results}}</div></pre>
         <button type="button" class="btn btn-info" ng-click="redirect()">Сравнить</button>
     </div>
 

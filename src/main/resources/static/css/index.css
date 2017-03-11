@@ -1,5 +1,7 @@
 html{
     background-color: aliceblue;
+    width:240px;
+    height:400px;
 }
 div[class*='logo'] {
     font-family: "Times New Roman", Times, serif;
@@ -17,12 +19,12 @@ div[class*='redirect']{
     width: 400px;
 }
 div[class*='sumCreditClient']{
-    margin-left: 18px;
-    width: 400px;
+    margin-left: 10px;
+    width: 220px;
 }
 div[class*='periodCreditClient']{
-    margin-left: 18px;
-    width: 400px;
+    margin-left: 10px;
+    width: 220px;
 }
 button{
     background-color:#3CB371;
@@ -34,13 +36,23 @@ button{
 }
 div[class*='row'] {
     font-family: "Times New Roman", Times, serif;
-    font-size:15px;
-    margin: 15px;
-    margin-left:25px;
+    font-size:10px;
+    margin: 10px;
+    margin-left:10px;
 }
 button[class*='btn btn-info']{
-    height:38px;
+    height:77px;
+    width:70px;
+    padding:0px;
+
 }
 pre[class*="col-sm-3"]{
-    width:290px;
+    width:150px;
+}
+
+div[id*='results'] {
+    font-family: "Times New Roman", Times, serif;
+    font-size:15px;
+    font-weight: 600;
+    display: inline-block;
 }

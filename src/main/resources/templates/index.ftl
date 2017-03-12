@@ -37,7 +37,7 @@
 
     </form>
 
-    <div class="row">
+    <div class="row"  >
         <pre class="col-sm-3">Количество<br/>доступных<br/>предложений: <div id="results">{{results}}</div></pre>
         <button type="button" class="btn btn-info" ng-click="redirect()">Сравнить</button>
     </div>

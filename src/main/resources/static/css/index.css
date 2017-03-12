@@ -1,6 +1,6 @@
 html{
     background-color: aliceblue;
-    width:240px;
+    width:228px;
     height:400px;
 }
 div[class*='logo'] {
@@ -20,11 +20,11 @@ div[class*='redirect']{
 }
 div[class*='sumCreditClient']{
     margin-left: 10px;
-    width: 220px;
+    width: 210px;
 }
 div[class*='periodCreditClient']{
     margin-left: 10px;
-    width: 220px;
+    width: 210px;
 }
 button{
     background-color:#3CB371;
@@ -47,7 +47,7 @@ button[class*='btn btn-info']{
 
 }
 pre[class*="col-sm-3"]{
-    width:150px;
+    width:135px;
 }
 
 div[id*='results'] {

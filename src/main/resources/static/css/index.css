@@ -1,6 +1,6 @@
 html{
     background-color: aliceblue;
-    width:215px;
+    width:240px;
     height:400px;
 }
 div[class*='logo'] {
@@ -19,12 +19,12 @@ div[class*='redirect']{
     width: 400px;
 }
 div[class*='sumCreditClient']{
-    margin-left: 1px;
-    width: 210px;
+    margin-left: 10px;
+    width: 220px;
 }
 div[class*='periodCreditClient']{
-    margin-left: 1px;
-    width: 210px;
+    margin-left: 10px;
+    width: 220px;
 }
 button{
     background-color:#3CB371;
@@ -38,11 +38,11 @@ div[class*='row'] {
     font-family: "Times New Roman", Times, serif;
     font-size:10px;
     margin: 10px;
-    margin-left:1px;
+    margin-left:10px;
 }
 button[class*='btn btn-info']{
     height:77px;
-    width:66px;
+    width:85px;
     padding:0px;
 
 }

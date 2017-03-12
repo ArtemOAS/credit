@@ -28,35 +28,32 @@
       </key>
     </database-model>
   </data-source>
-  <data-source name="MySQL - sql8162243@sql8.freemysqlhosting.net" uuid="7563b31e-d52a-4a66-a461-cd5ef584511c">
-    <database-info product="MySQL" version="5.5.49-0ubuntu0.14.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+  <data-source name="MySQL - sql11163510@sql11.freesqldatabase.com" uuid="e723c8dc-79b4-44b8-8b75-76c3b7054ff5">
+    <database-info product="MySQL" version="5.5.53-0ubuntu0.14.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
     </database-info>
     <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
     <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
-      <schema id="1" name="sql8162243"/>
+      <schema id="1" name="sql11163510"/>
       <table id="2" parent="1" name="data_credit"/>
       <column id="3" parent="2" name="id">
         <mandatory>1</mandatory>
-        <data-type>int(150)</data-type>
+        <data-type>int(15)</data-type>
       </column>
       <column id="4" parent="2" name="sum_credit">
-        <mandatory>1</mandatory>
-        <data-type>varchar(150)</data-type>
+        <data-type>varchar(50)</data-type>
       </column>
       <column id="5" parent="2" name="period_credit">
-        <mandatory>1</mandatory>
-        <data-type>varchar(150)</data-type>
+        <data-type>varchar(50)</data-type>
       </column>
       <column id="6" parent="2" name="bank">
-        <mandatory>1</mandatory>
-        <data-type>varchar(150)</data-type>
+        <data-type>varchar(50)</data-type>
       </column>
-      <index id="7" parent="2" name="id">
+      <key id="7" parent="2" name="PRIMARY">
         <columns>id</columns>
-        <desc-columns></desc-columns>
-      </index>
+        <primary>1</primary>
+      </key>
     </database-model>
   </data-source>
 </component>

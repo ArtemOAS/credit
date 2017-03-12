@@ -42,7 +42,7 @@ public class CreditPage {
 
         WebDriverWait webDriverWait = new WebDriverWait(driver, 10);
 
-        for (int sum = 1000; sum < 50000; sum += 1000) {
+        for (int sum = 1000; sum < 30000; sum += 1000) {
             webDriverWait.until(ExpectedConditions.visibilityOf(sumCredit));
             sumCredit.clear();
             sumCredit.sendKeys(String.valueOf(sum));
@@ -97,9 +97,9 @@ public class CreditPage {
 
     public Connection connection() throws ClassNotFoundException {
 
-        String databaseURL = "jdbc:mysql://sql8.freemysqlhosting.net:3306/sql8162243?useUnicode=true&characterEncoding=UTF-8";
-        String user = "sql8162243";
-        String password = "SsBXj9QF99";
+        String databaseURL = "jdbc:mysql://sql11.freesqldatabase.com:3306/sql11163510?useUnicode=true&characterEncoding=UTF-8";
+        String user = "sql11163510";
+        String password = "Q1Fj1albxB";
         Class.forName("com.mysql.jdbc.Driver");
 
         try {

@@ -129,5 +129,6 @@
     <orderEntry type="library" name="Maven: com.zaxxer:HikariCP:2.2.5" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.21" level="project" />
     <orderEntry type="library" name="Maven: org.javassist:javassist:3.20.0-GA" level="project" />
+    <orderEntry type="library" name="ui-bootstrap" level="application" />
   </component>
 </module>

@@ -1,5 +1,5 @@
 var app = angular.module('app', ['rzModule', 'ui.bootstrap']);
-app.controller('appCtrl', ['$scope', '$http', '$window', '$location', function ($scope, $http, $window, $location) {
+app.controller('appCtrl', ['$scope', '$http', '$window', '$location', function ($scope, $http, $window) {
     $scope.results = '0';
 
     $scope.search = function(){

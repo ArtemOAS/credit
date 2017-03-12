@@ -8,6 +8,9 @@ div[class*='logo'] {
     color:brown;
     margin-right: 18px;
 }
+h2{
+    padding:10px;
+}
 div[class*='resultBanks'] {
     font-family: "Times New Roman", Times, serif;
     font-size:15px;

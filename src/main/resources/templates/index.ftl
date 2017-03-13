@@ -2,6 +2,9 @@
 <html ng-app="app">
 <head>
     <title>Credit</title>
+    <link rel="stylesheet/less" type="text/css" href="/css/style.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js"></script>
+
     <link href="/css/index.css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="/css/rzslider.css"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -27,20 +30,28 @@
         <div id="sum" class="sumCreditClient">
 
             <h4>Сумма:</h4>
-            <rzslider rz-slider-model="sliderSum.valueSum" rz-slider-options="sliderSum.optionsSum"></rzslider>
+            <rzslider rz-slider-model="sliderSum.valueSum"
+                      rz-slider-options="sliderSum.optionsSum"></rzslider>
         </div>
 
         <div id="period" class="periodCreditClient">
+
             <h4>Срок:</h4>
             <rzslider rz-slider-model="sliderPeriod.valuePeriod"
                       rz-slider-options="sliderPeriod.optionsPeriod"></rzslider>
+
         </div>
 
     </form>
 
-    <div class="row">
-        <pre class="col-xs-6 col-sm-4">Количество<br/>доступных<br/>предложений: <div id="results">{{results}}</div></pre>
-        <button type="button" class="btn btn-info" ng-click="redirect()">Сравнить</button>
+    <div id="container" class="container-fluid">
+        <div class="row">
+            <div id="block_result" class="col-xs-6 col-sm-4">
+                Количество доступных предложений:
+                <div id="results">{{results}}</div>
+            </div>
+            <button type="button" class="btn btn-info" ng-click="redirect()">Сравнить</button>
+        </div>
     </div>
 
 </div>

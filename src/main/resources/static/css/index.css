@@ -2,29 +2,14 @@ html{
     width:240px;
     height:400px;
 }
-div[class*='logo'] {
-    font-family: "Times New Roman", Times, serif;
-    font-size:10px;
-    color:brown;
-    margin-right: 18px;
-}
 h2{
     padding:10px;
 }
-div[class*='resultBanks'] {
-    font-family: "Times New Roman", Times, serif;
-    font-size:15px;
-    color:brown
-}
-div[class*='redirect']{
-    margin-left: 18px;
-    width: 400px;
-}
-div[class*='sumCreditClient']{
+.sumCreditClient{
     margin-left: 10px;
     width: 220px;
 }
-div[class*='periodCreditClient']{
+.periodCreditClient{
     margin-left: 10px;
     width: 220px;
 }
@@ -32,29 +17,26 @@ button{
     background-color:#3CB371;
     border-color: #3CB371;
     color: white;
-    border-radius: 4px;
-    position: relative;
-    margin:2px;
-}
-div[class*='row'] {
-    font-family: "Times New Roman", Times, serif;
-    font-size:10px;
-    margin: 10px;
-    margin-left:10px;
 }
 button[class*='btn btn-info']{
-    height:77px;
+    height: 100%;
     width:85px;
     padding:0px;
+    border-radius: 0px 10px 10px 0px;
 
 }
-pre[class*="col-xs-6 col-sm-4"]{
-    width:133px;
+.row {
+    margin: 10px;
+    width:300px;
+    height:85px;
 }
-
-div[id*='results'] {
+#results {
     font-family: "Times New Roman", Times, serif;
     font-size:15px;
     font-weight: 600;
     display: inline-block;
+
+}
+#container{
+    padding-left: 25px;
 }

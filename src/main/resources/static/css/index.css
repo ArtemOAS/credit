@@ -7,10 +7,12 @@ h2{
 }
 .sumCreditClient{
     margin-left: 10px;
+    margin-right: 10px;
     width: 220px;
 }
 .periodCreditClient{
     margin-left: 10px;
+    margin-right: 10px;
     width: 220px;
 }
 button{
@@ -26,8 +28,7 @@ button[class*='btn btn-info']{
 
 }
 .row {
-    margin: 10px;
-    width:300px;
+    margin:10px;
     height:85px;
 }
 #results {
@@ -39,4 +40,5 @@ button[class*='btn btn-info']{
 }
 #container{
     padding-left: 25px;
+    padding-right: 25px;
 }

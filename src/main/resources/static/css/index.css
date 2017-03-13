@@ -5,12 +5,12 @@ html{
 h2{
     padding:10px;
 }
-.sumCreditClient{
+div#sum.sumCreditClient{
     margin-left: 10px;
     margin-right: 10px;
     width: 220px;
 }
-.periodCreditClient{
+div#period.periodCreditClient{
     margin-left: 10px;
     margin-right: 10px;
     width: 220px;
@@ -20,25 +20,39 @@ button{
     border-color: #3CB371;
     color: white;
 }
-button[class*='btn btn-info']{
+button#but{
     height: 100%;
     width:85px;
     padding:0px;
     border-radius: 0px 10px 10px 0px;
 
 }
-.row {
+div#row_res.row {
     margin:10px;
     height:85px;
 }
-#results {
+div#results {
     font-family: "Times New Roman", Times, serif;
     font-size:15px;
     font-weight: 600;
     display: inline-block;
 
 }
-#container{
-    padding-left: 25px;
-    padding-right: 25px;
+#block_result{
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 10px 0px 0px 10px;
+    width:133px;
+    height: 100%;
+}
+
+#cont.container-fluid{
+    padding-right: 0px;
+    padding-left: 0px;
 }

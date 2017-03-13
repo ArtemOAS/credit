@@ -2,21 +2,18 @@
 <html ng-app="app">
 <head>
     <title>Credit</title>
-    <link rel="stylesheet/less" type="text/css" href="/css/style.less">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js"></script>
 
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.1.0/rzslider.min.css"/>
     <link href="/css/index.css" rel="stylesheet"/>
-    <link rel="stylesheet" type="text/css" href="/css/rzslider.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <script type="text/javascript" src="/lib/angular.min.js"></script>
     <script type="text/javascript" src="/js/main.js"></script>
-    <script type="text/javascript" src="/lib/rzslider.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.1.0/rzslider.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.js"></script>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-    <!-- Latest compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js"></script>
 </head>
 
@@ -44,13 +41,13 @@
 
     </form>
 
-    <div id="container" class="container-fluid">
-        <div class="row">
+    <div id="cont" class="container-fluid">
+        <div id="row_res" class="row">
             <div id="block_result" class="col-xs-6 col-sm-4">
                 Количество доступных предложений:
                 <div id="results">{{results}}</div>
             </div>
-            <button type="button" class="btn btn-info" ng-click="redirect()">Сравнить</button>
+            <button id="but" class="btn btn-info" type="button" ng-click="redirect()">Сравнить</button>
         </div>
     </div>
 

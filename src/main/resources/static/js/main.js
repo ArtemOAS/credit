@@ -1,4 +1,4 @@
-var app = angular.module('app', ['rzModule', 'ui.bootstrap']);
+var app = angular.module('app', ['rzModule', 'ui.bootstrap', '720kb.tooltips']);
 app.controller('appCtrl', ['$scope', '$http', '$window', function ($scope, $http, $window) {
     $scope.results = '0';
 

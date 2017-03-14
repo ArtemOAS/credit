@@ -7,6 +7,8 @@
     <link href="/css/index.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link href="/css/angular-tooltips.min.css" rel="stylesheet" type="text/css" />
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <script type="text/javascript" src="/lib/angular.min.js"></script>
     <script type="text/javascript" src="/js/main.js"></script>
@@ -17,6 +19,8 @@
 </head>
 
 <body ng-controller="appCtrl">
+<script src="/lib/angular-tooltips.min.js"></script>
+
 <div id="credit_block">
 
     <div id="logotype">Подбор онлайн займа</div>
@@ -43,8 +47,8 @@
     <div id="cont" class="container-fluid">
         <div id="row_res" class="row">
             <div id="block_result" class="col-xs-6 col-sm-4">
-                Количество доступных предложений:
-                <div id="results" >{{results}}</div>
+                Найдено:
+                <div id="results" tooltips tooltip-template="Количество доступных предложений">{{results}}</div>
             </div>
             <button id="but" class="btn btn-info" type="button" ng-click="redirect()">Сравнить</button>
         </div>

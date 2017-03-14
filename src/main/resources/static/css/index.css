@@ -1,35 +1,44 @@
 html{
-    width:240px;
+    width:210px;
     height:400px;
+    background-color:#F0F0F0;
+    margin-left:10px;
 }
-h2{
-    padding:10px;
+body{
+    border-radius:10px;
+    border: 1px solid #E0E0E0;
+}
+#logotype{
+    padding:5px;
+    font-size: 27px;
+    text-align: center;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 div#sum.sumCreditClient{
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 220px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 200px;
 }
 div#period.periodCreditClient{
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 220px;
-}
-button{
-    background-color:#3CB371;
-    border-color: #3CB371;
-    color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 200px;
 }
 button#but{
     height: 100%;
-    width:85px;
+    width:65px;
     padding:0px;
     border-radius: 0px 10px 10px 0px;
 
 }
 div#row_res.row {
-    margin:10px;
-    height:85px;
+    margin:5px;
+    height:75px;
 }
 div#results {
     font-family: "Times New Roman", Times, serif;
@@ -51,7 +60,6 @@ div#results {
     width:133px;
     height: 100%;
 }
-
 #cont.container-fluid{
     padding-right: 0px;
     padding-left: 0px;

@@ -27,12 +27,12 @@ app.controller('appCtrl', ['$scope', '$http', '$window', function ($scope, $http
             translate: function(value) {
                 return value+' руб';
             },
-            onChange: $scope.search,
+            onEnd: $scope.search,
             showSelectionBar: true,
             selectionBarGradient: {
                 from: '#FC0',
                 to: '#FC0'
-            }
+            },
         }
     };
 
@@ -53,12 +53,12 @@ app.controller('appCtrl', ['$scope', '$http', '$window', function ($scope, $http
                     return value+' дней';
                 }
             },
-            onChange: $scope.search,
+            onEnd: $scope.search,
             showSelectionBar: true,
             selectionBarGradient: {
                 from: '#FC0',
                 to: '#FC0'
-            }
+            },
         }
     };
 

@@ -2,7 +2,6 @@
 <html ng-app="app">
 <head>
     <title>Credit</title>
-
     <link rel="stylesheet" type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.1.0/rzslider.min.css"/>
     <link href="/css/index.css" rel="stylesheet"/>
@@ -18,9 +17,9 @@
 </head>
 
 <body ng-controller="appCtrl">
-<div>
+<div id="credit_block">
 
-    <h2>Подбор онлайн займа</h2>
+    <div id="logotype">Подбор онлайн займа</div>
 
     <form id="search">
 
@@ -45,7 +44,7 @@
         <div id="row_res" class="row">
             <div id="block_result" class="col-xs-6 col-sm-4">
                 Количество доступных предложений:
-                <div id="results">{{results}}</div>
+                <div id="results" >{{results}}</div>
             </div>
             <button id="but" class="btn btn-info" type="button" ng-click="redirect()">Сравнить</button>
         </div>

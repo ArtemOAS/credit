@@ -62,6 +62,7 @@ app.controller('appCtrl', ['$scope', '$http', '$window', function ($scope, $http
         }
     };
 
+    $scope.search();
 
     $scope.redirect = function() {
         $window.top.location.href='http://xn----7sbgjeqdny1agesg7l.xn--p1ai/';

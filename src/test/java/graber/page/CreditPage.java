@@ -42,7 +42,7 @@ public class CreditPage {
 
         WebDriverWait webDriverWait = new WebDriverWait(driver, 10);
 
-        for (int sum = 26000; sum <= 30000; sum += 1000) {
+        for (int sum = 1; sum <= 30000; sum += 1000) {
             webDriverWait.until(ExpectedConditions.visibilityOf(sumCredit));
             sumCredit.clear();
             sumCredit.sendKeys(String.valueOf(sum));

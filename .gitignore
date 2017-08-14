@@ -3,4 +3,4 @@
 .project
 .settings
 .idea/
-/hometask-skeleton.iml
+*.iml
